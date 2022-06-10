@@ -1,62 +1,67 @@
 import React from 'react';
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import instalNode from "../assets/portfolio/installNode.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import menufacturers from "../assets/portfolio/menufacturer.png";
+import carwarehouse from "../assets/portfolio/carwarehouse.png";
+import sportphotograher from "../assets/portfolio/sportphotograher.png";
+import foodpanda from "../assets/portfolio/foodpanda.png";
+import televisionshop from "../assets/portfolio/televisionshop.png";
 
 const Portfolio = () => {
 
 	const portfolio = [
 		{
 			id: 1,
-			src: arrayDestruct
+			src: menufacturers,
+			href: "https://assignment-12-with-node.web.app/"
 		},
 		{
 			id: 2,
-			src: reactParallax
+			src: carwarehouse,
+			href: "https://warehouse-with-node.web.app/"
 		},
 		{
 			id: 3,
-			src: navbar
+			src: sportphotograher,
+			href: "https://assignment-10-with-firebase.web.app/"
 		},
 		{
 			id: 4,
-			src: reactSmooth
+			src: foodpanda,
+			href: "https://freshfoodsshop.netlify.app/"
 		},
 		{
 			id: 5,
-			src: instalNode
-		},
-		{
-			id: 6,
-			src: reactWeather
-		},
+			src: televisionshop,
+			href: "https://televisionshopwithled.netlify.app/"
+		}
 	];
 
 
   	return (
-		<div name="portfolio" className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen">
-			<div className="max-w-screen-lg p-4 mx-auto flex-col justify-center w-full h-full">
+		<div name="portfolio" className="w-full pt-8 md:pt-24 pb-10 bg-gradient-to-b from-black to-gray-800 text-white">
+			<div className="max-w-screen-lg md:px-16 px-8 mx-auto">
 				<div className="pb-8">
 					<p className="text-4xl font-bold inlin border-b-4 border-gray-500">Portfolio</p>
 					<p className="py-6">Check out some of my work right here</p>
 				</div>
-				<div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+				<div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 text-center md:py-8 sm:px-0">
 				{
-					portfolio.map(({id, src}) => (
-							<div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-								<img 
-									src={src} 
-									alt="" 
-									className="rounded-md duration-200 hover:scale-105"
-								/>
-								<div className="flex items-center justify-center ">
-									<button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">Demo</button>
-									<button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">code</button>
+					portfolio.map(({id, src, href}) => (
+						<div key={id} className="card bg-base-100 shadow-xl">
+							<figure><img src={src} alt="Shoes" /></figure>
+							<div className="card-body text-black">
+								<h2 className="card-title text-start">Site name</h2>
+								<p className="text-start">Description If a dog chews shoes whose shoes does he choose?</p>
+								<div className="card-actions justify-between">
+									<a href={href}
+									target="_blank"
+									rel="noreferrer"
+									>
+									<button className="btn btn-secondary duration-200 hover:scale-105">Demo</button>
+									</a>
+									<button className="btn btn-primary duration-200 hover:scale-105">Details</button>
 								</div>
 							</div>
+						</div>
 					))
 				}
 				</div>

@@ -14,7 +14,7 @@ const NavBar = () => {
 		},
 		{
 			id: 2,
-			link: 'about',
+			link: 'about me',
 
 		},
 		{
@@ -32,10 +32,15 @@ const NavBar = () => {
 			link: 'contact',
 
 		},
+		{
+			id: 6,
+			link: 'blogs',
+
+		},
 	]
 
 	return (
-		<div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black">
+		<div className="flex justify-between items-center z-50 fixed w-full h-20 px-4 md:px-12 text-white bg-black">
 			<div>
 				<h1 className="text-5xl font-signature ml-2">Jubayer</h1>
 			</div>

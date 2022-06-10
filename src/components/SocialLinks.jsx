@@ -13,7 +13,7 @@ const SocialLinks = () => {
 					LinkedIn <FaLinkedin size={30} />
 				</>
 			),
-			href: 'http://linkedin.com/'
+			href: 'https://www.linkedin.com/in/jubayer-hosain-947010236/'
 		},
 		{
 			id: 2,
