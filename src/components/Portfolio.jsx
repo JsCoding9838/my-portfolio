@@ -4,6 +4,7 @@ import carwarehouse from "../assets/portfolio/carwarehouse.png";
 import sportphotograher from "../assets/portfolio/sportphotograher.png";
 import foodpanda from "../assets/portfolio/foodpanda.png";
 import televisionshop from "../assets/portfolio/televisionshop.png";
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
 
@@ -44,28 +45,28 @@ const Portfolio = () => {
 					<p className="py-6">Check out some of my work right here</p>
 				</div>
 				<div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 text-center md:py-8 sm:px-0">
-				{
-					portfolio.map(({id, src, href}) => (
-						<div key={id} className="card bg-base-100 shadow-xl">
-							<figure><img src={src} alt="Shoes" /></figure>
-							<div className="card-body text-black">
-								<h2 className="card-title text-start">Site name</h2>
-								<p className="text-start">Description If a dog chews shoes whose shoes does he choose?</p>
-								<div className="card-actions justify-between">
-									<a href={href}
-									target="_blank"
-									rel="noreferrer"
-									>
-									<button className="btn btn-secondary duration-200 hover:scale-105">Demo</button>
-									</a>
-									<button className="btn btn-primary duration-200 hover:scale-105">Details</button>
+					{
+						portfolio.map(({id, src, href}) => (
+							<div key={id} className="card bg-base-100 shadow-xl">
+								<figure><img src={src} alt="Shoes" /></figure>
+								<div className="card-body text-black">
+									<h2 className="card-title text-start">Site name</h2>
+									<p className="text-start">Description If a dog chews shoes whose shoes does he choose?</p>
+									<div className="card-actions justify-between">
+										<a href={href}
+										target="_blank"
+										rel="noreferrer"
+										>
+										<button className="btn btn-secondary duration-200 hover:scale-105">Demo</button>
+										</a>
+										<button className="btn btn-primary duration-200 hover:scale-105">Details</button>
+									</div>
 								</div>
 							</div>
-						</div>
-					))
-				}
-				</div>
+						))
+					}
 				
+				</div>
 			</div>
 		</div>
   	)

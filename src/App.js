@@ -7,6 +7,8 @@ import Portfolio from "./components/Portfolio";
 import SocialLinks from "./components/SocialLinks";
 import Blogs from "./components/Blogs";
 import Footer from "./components/Footer";
+import MenufacturersDetails from "./components/MenufacturersDetails";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -19,6 +21,11 @@ function App() {
       <Experience />
       <Contact />
       <SocialLinks />
+      <Routes>
+        
+        <Route path="menufacturers" element={<MenufacturersDetails />}></Route>
+      </Routes>
+      
       <Footer />
     </div>
   );
