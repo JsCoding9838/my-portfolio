@@ -4,7 +4,6 @@ import carwarehouse from "../assets/portfolio/carwarehouse.png";
 import sportphotograher from "../assets/portfolio/sportphotograher.png";
 import foodpanda from "../assets/portfolio/foodpanda.png";
 import televisionshop from "../assets/portfolio/televisionshop.png";
-import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
 
