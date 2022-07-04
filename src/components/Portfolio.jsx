@@ -4,6 +4,7 @@ import carwarehouse from "../assets/portfolio/carwarehouse.png";
 import sportphotograher from "../assets/portfolio/sportphotograher.png";
 import foodpanda from "../assets/portfolio/foodpanda.png";
 import televisionshop from "../assets/portfolio/televisionshop.png";
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
 
@@ -47,7 +48,10 @@ const Portfolio = () => {
 					{
 						portfolio.map(({id, src, href}) => (
 							<div key={id} className="card bg-base-100 shadow-xl">
-								<figure><img src={src} alt="Shoes" /></figure>
+								<figure><motion.img 
+								whileHover={{scale:1.1}}
+								initial={{scale:1}}
+								src={src} alt="Shoes" /></figure>
 								<div className="card-body text-black">
 									<h2 className="card-title text-start">Site name</h2>
 									<p className="text-start">Description If a dog chews shoes whose shoes does he choose?</p>
